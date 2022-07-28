@@ -1,0 +1,14 @@
+{
+    "image": "nicolasaigner/angular-docker:latest",
+    "ports": "4200:4200"
+    "environmentVariables": [
+        {
+            "name": "NODE_ENV",
+            "value": "development"
+        },
+        {
+            "name": "PORT",
+            "value": "4200"
+        }
+    ]
+}
