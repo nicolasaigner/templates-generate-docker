@@ -1,19 +1,16 @@
 {
     "image": "nicolasaigner/angular-docker:latest",
-    "containerName": "frontend-angular",
+    "container_name": "frontend-angular",
     "volumes": [
         "${PWD}:/usr/src/app",
         "/usr/src/app/node_modules"
     ],
-    "ports": "4200:4200"
-    "environmentVariables": [
-        {
-            "name": "NODE_ENV",
-            "value": "development"
-        },
-        {
-            "name": "PORT",
-            "value": "4200"
-        }
-    ]
+    "ports": [
+        "4200:4200"
+    ],
+    "environment": [
+        "NODE_ENV=development",
+        "PORT=4200"
+    ],
+    "depends_on": []
 }
